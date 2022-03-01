@@ -5,7 +5,7 @@ def modelLSTM(shape):
     model = keras.Sequential([
         keras.layers.Embedding(50000, 256, input_length=shape),
         keras.layers.SpatialDropout1D(0.2),
-        keras.layers.LSTM(256, dropout=0.2),
+        keras.layers.LSTM(256),
         keras.layers.Dropout(0.2),
         keras.layers.Dense(10, activation='softmax')])
 

@@ -101,7 +101,7 @@ def getSplitWordWithoutStopWord():
     return resSheet
 
 
-def commentCut(data, lenSentense=100):  # you bug
+def commentCut(data, lenSentense=100):
     resSheet = []
     for i in data:
         resSheet.append(i[:max(lenSentense, len(i))])
@@ -120,7 +120,7 @@ def word2NumDict(data):
             if j not in resSheet:
                 resSheet.append(j)
         cnt += 1
-    f = open('./dataset/xWord2Num.txt', 'w', encoding='utf-8')
+    f = open('./dataset/xWord2NumDict.txt', 'w', encoding='utf-8')
 
     for i in range(len(resSheet)):
         f.write(resSheet[i] + ' ')
@@ -225,7 +225,7 @@ def getXAfterPreprocessing():
     return resSheet
 
 
-def randomizeDataaset(x, y, randomTestSize=0.3):
+def randomizeDataset(x, y, randomTestSize=0.3):
     xTrain = []
     yTrain = []
     xTest = []

@@ -9,11 +9,11 @@ import dataPreprocessing as dp
 plt.rcParams['font.sans-serif'] = ['SimHei']
 plt.rcParams['axes.unicode_minus'] = False
 x, y = dp.getXAfterPreprocessing(), dp.getYAfterPreprocessing()
-xTrain, yTrain, xTest, yTest = dp.randomizeDataaset(x, y)
+xTrain, yTrain, xTest, yTest = dp.randomizeDataset(x, y)
 yTrain = keras.utils.to_categorical(yTrain)
 yTest = keras.utils.to_categorical(yTest)
 Y_test = yTest
-model = keras.models.load_model('model.h5')
+model = keras.models.load_model('model-LSTM.h5')
 
 y_pred = model.predict(xTest)
 y_pred = y_pred.argmax(axis=1)

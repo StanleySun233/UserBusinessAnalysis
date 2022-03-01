@@ -8,7 +8,7 @@ import rewriteCallbak as rc
 
 print(tf.config.list_physical_devices('GPU'))
 x, y = dp.getXAfterPreprocessing(), dp.getYAfterPreprocessing()
-xTrain, yTrain, xTest, yTest = dp.randomizeDataaset(x, y)
+xTrain, yTrain, xTest, yTest = dp.randomizeDataset(x, y)
 
 yTrain, yTest = keras.utils.to_categorical(yTrain), keras.utils.to_categorical(yTest)
 
@@ -18,8 +18,8 @@ print(np.shape(xTest))
 print(np.shape(yTest))
 
 model = md.modelLSTM(xTrain.shape[1])
-epoch = 50
-batch_size = 32
+epoch = 1
+batch_size = 3200
 
 history = rc.LossHistory("LSTM")
 
