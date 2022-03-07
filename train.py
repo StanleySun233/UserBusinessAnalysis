@@ -18,8 +18,8 @@ print(np.shape(xTest))
 print(np.shape(yTest))
 
 model = md.modelLSTM(xTrain.shape[1])
-epoch = 1
-batch_size = 3200
+epoch = 100
+batch_size = 32
 
 history = rc.LossHistory("LSTM")
 
