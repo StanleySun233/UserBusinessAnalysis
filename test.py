@@ -18,7 +18,7 @@ model = keras.models.load_model('model-LSTM.h5')
 y_pred = model.predict(xTest)
 y_pred = y_pred.argmax(axis=1)
 Y_test = Y_test.argmax(axis=1)
-yDict = dp.Cat2Number(dp.getNum2Cat())
+yDict = dp.cat2Number(dp.getNum2Cat())
 yDict = yDict.keys()
 
 conf_mat = confusion_matrix(Y_test, y_pred)

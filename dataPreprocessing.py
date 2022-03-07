@@ -32,7 +32,7 @@ def getNum2Cat():
     return labelDict
 
 
-def Cat2Number(labelDict):
+def cat2Number(labelDict):
     numberDict = dict(zip(labelDict.values(), labelDict.keys()))
     return numberDict
 
@@ -101,10 +101,10 @@ def getSplitWordWithoutStopWord():
     return resSheet
 
 
-def commentCut(data, lenSentense=100):
+def commentCut(data, lenSentence=100):
     resSheet = []
     for i in data:
-        resSheet.append(i[:max(lenSentense, len(i))])
+        resSheet.append(i[:max(lenSentence, len(i))])
     return resSheet
 
 
@@ -195,7 +195,7 @@ def getXAfterTranslate():
     return resSheet
 
 
-def setSentense2Lenght(data, dataLen=100):
+def setSentence2Length(data, dataLen=100):
     resSheet = []
     for i in data:
         resSheet.append(i)

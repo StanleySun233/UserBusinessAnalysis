@@ -8,9 +8,9 @@ X = dp.splitWordWithoutStopWord(X, stop)
 X = dp.commentCut(X)
 
 XDict = dp.word2NumDict(X)
-YDict = dp.Cat2Number(dp.getNum2Cat())
+YDict = dp.cat2Number(dp.getNum2Cat())
 
 X = dp.translateWord2NumX(X, XDict)
 Y = dp.translateWord2NumY(Y, YDict)
 
-X = dp.setSentense2Lenght(X)
+X = dp.setSentence2Length(X)
